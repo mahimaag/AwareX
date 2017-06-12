@@ -1,0 +1,15 @@
+
+    $high-progress-color:green;
+    $medium-progress-color: yellow;
+    $low-progress-color: #D53453;
+
+
+.high-usage {
+    stroke: $high-progress-color;
+}
+.medium-usage {
+    stroke: $medium-progress-color;
+}
+.low-usage {
+    stroke: $low-progress-color;
+}
