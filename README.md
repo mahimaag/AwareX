@@ -1,4 +1,4 @@
-# react-ecommerce
+# react-AwareX
 
 Things that didn't worked well:
 1. Design and Architecture issue#1:
