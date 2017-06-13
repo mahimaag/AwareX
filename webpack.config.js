@@ -16,6 +16,11 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test   : /\.(ttf|eot|svg|woff(2)|woff|png|jpg|gif?)(\?[a-z0-9=&.]+)?$/,
+                //use: [{loader : 'file-loader'}, {loader: 'url-loader?limit=30000'}]
+                loader: 'url-loader?limit=100000'
+            },
+            {
                 test: /(\.css$)|(\.scss$)/,
                 use: [
                     { loader: 'style-loader'},
@@ -24,15 +29,16 @@ module.exports = {
                 ]
             },
             {
-                test   : /\.(ttf|eot|svg|woff(2)|woff|png?)(\?[a-z0-9=&.]+)?$/,
-                loader : 'file-loader'
-            },
-            {
                 test: /\.yaml$/,
                 use: [
                     {loader: 'json-loader'},
                     {loader: 'yaml-loader'},
                 ]
+            },
+            {
+                test: /(\.css$)|(\.scss$)/,
+                include: /node-modules/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },

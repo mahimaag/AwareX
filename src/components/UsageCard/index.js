@@ -13,26 +13,25 @@ class UsageCard extends React.Component {
     }
 
     getSliderComponents(sliderItems){
-        console.log('hjhbhjbh', sliderItems)
         let items;
-        items = sliderItems.map(item => {
+        items = sliderItems.map((item,index) => {
             if (item) {
                 switch (item) {
                     case 'Data':
                         return(
-                            <div>
+                            <div key={index}>
                                 <DataUsageCard/>
                             </div>
                         )
                     case 'Sms':
                         return(
-                            <div>
+                            <div key={index}>
                                 <SmsUsageCard/>
                             </div>
                         )
                     case 'Voice':
                         return(
-                            <div>
+                            <div key={index}>
                                 <VoiceUsageCard/>
                             </div>
                         );

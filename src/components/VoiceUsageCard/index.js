@@ -11,7 +11,7 @@ class VoiceUsageCard extends React.Component {
     render() {
         return (
             <div>
-                <CircularProgressbar percentage={30} />
+                <CircularProgressbar percentage={100} />
             </div>
         );
     }
