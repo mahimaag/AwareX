@@ -1,4 +1,4 @@
-@import url("./../../assets/css/style.scss");
+@import "./../../assets/css/style.scss";
 .CircularProgressbar {
     /*
      * This fixes an issue where the CircularProgressbar svg has
@@ -13,6 +13,17 @@
 
     stroke-linecap: round;
     transition: stroke-dashoffset 0.5s ease 0s;
+}
+.high-usage {
+  stroke: $high-progress-color;
+}
+
+.medium-usage {
+  stroke: $medium-progress-color;
+}
+
+.low-usage {
+  stroke: $low-progress-color;
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
